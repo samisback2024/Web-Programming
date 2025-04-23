@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New York City Travel Guide</title>
+  <style>
+    /* Basic Reset */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    /* Header Style */
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #34495e;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    /* Hover effect on navigation */
+    nav a:hover {
+      background-color: #1abc9c;
+    }
+
+    /* Main Content Section */
+    .content {
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    /* Individual Cards for Attractions */
+    .card {
+      background-color: white;
+      margin: 10px;
+      width: 200px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Video Section Placeholder */
+    .video-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+    }
+
+    .video-container iframe {
+      width: 80%;
+      height: 315px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    /* Tablet Responsive Design */
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        width: 80%;
+        margin: 10px 0;
+      }
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>New York City Travel Guide</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#attractions">Top Attractions</a>
+    <a href="#restaurants">Restaurants</a>
+    <a href="#hotels">Hotels</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Main Content Section -->
+  <div class="content">
+    <div class="card">
+      <!-- Image of Statue of Liberty -->
+      <img src="img/statue of liberty.jpg" alt="Statue of Liberty">
+      <h3>Statue of Liberty</h3>
+      <p>Explore the symbol of freedom and American history.</p>
+    </div>
+
+    <div class="card">
+      <!-- Image of Central Park -->
+      <img src="img/central park.jpg" alt="Central Park">
+      <h3>Central Park</h3>
+      <p>Relax in the heart of the city with lush green spaces.</p>
+    </div>
+
+    <div class="card">
+      <!-- Image of Times Square -->
+      <img src="img/time square.jpg" alt="Times Square">
+      <h3>Times Square</h3>
+      <p>Experience the neon lights and vibrant energy of the city.</p>
+    </div>
+  </div>
+
+  <!-- Video Placeholder (e.g., for a virtual tour of NYC) -->
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/_dHbOdl5ysI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 New York City Travel Guide</p>
+  </footer>
+
+</body>
+</html>
+
+
+
