@@ -1,0 +1,120 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('technology.png'), linear-gradient(to right, #87CEEB, #FFD700);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid #ccc;
+}
+
+section {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo {
+    width: 400px; /* Set width of the image */
+    height: 400px; /* Set height of the image */
+    object-fit: cover; /* Ensures the image fills the square without distortion */
+    border: 28px solid #fff; /* Optional: Adds a white border around the image */
+}
+
+/* Layout */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.left-side {
+    width: 55%;
+}
+
+.right-side {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+/* Link Styles */
+a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #ffb6c1;
+    color: #000;
+}
+
+td {
+    background-color: #ffe4e1;
+}
+
+tr:nth-child(even) td {
+    background-color: #ffc3a0;
+}
+
+/* Poem Section */
+.poem {
+    text-align: center;
+    font-style: italic;
+    margin: 20px 0;
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 10px;
+}
