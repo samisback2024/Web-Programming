@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--   
+Project:  Newton's Laws of Motion Website
+Name: Samuel Raja
+Submitted: April 18, 2025
+
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that if I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+
+Reflection 
+I really enjoyed creating this project. I had fun improving the design of the form and learning how CSS can make a huge difference in user experience. 
+Initially, I struggled with aligning the form elements properly, but after practicing with Flexbox and some grid layouts, it became much easier. 
+This project helped me get more comfortable with organizing content and writing cleaner HTML and CSS.
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton's Laws of Motion</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css"> <!-- Added for form-specific styles -->
+</head>
+<body>
+    <header>
+        <img src="img/newton.jpg" alt="Newton" class="header-img">
+        <h1>Newton's Laws of Motion</h1>
+        <button id="theme-toggle" class="theme-toggle-btn">Toggle Dark Theme</button>
+    </header>
+    
+    <nav>
+        <ul class="nav-list">
+            <li><a href="#" onclick="showSection('home', event)">Home</a></li>
+            <li><a href="#" onclick="showSection('laws', event)">Laws</a></li>
+            <li><a href="#" onclick="showSection('biography', event)">Biography</a></li>
+            <li><a href="#" onclick="showSection('impact', event)">Impact</a></li>
+            <li><a href="#" onclick="showSection('contact', event)">Contact</a></li>
+            <li><a href="#" onclick="showSection('visitor', event)">Log Visit</a></li> <!-- Added Log Visit menu item -->
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="section">
+            <h2>Welcome to Newton's Laws of Motion</h2>
+            <p>Explore the fundamental principles that govern motion.</p>
+            <figure>
+                <img src="img/law of motion.png" alt="Laws of Motion" class="section-img">
+                <figcaption>Illustration of Newton's Laws of Motion</figcaption>
+            </figure>
+            <iframe class="section-video" src="https://www.youtube.com/embed/-w6oW1ut4Dw" title="Newton's Laws of Motion" frameborder="0" allowfullscreen></iframe>
+        </section>
+        
+        <section id="laws" class="section hidden">
+            <h2>The Three Laws of Motion</h2>
+            <h3>First Law: Law of Inertia</h3>
+            <p>An object at rest stays at rest, and an object in motion stays in motion unless acted upon by an external force.</p>
+            <p><strong>Formula: F = 0 → v = constant</strong></p>
+            
+            <h3>Second Law: Law of Acceleration</h3>
+            <p>The acceleration of an object depends on the force applied and its mass.</p>
+            <p><strong>Formula: F = ma</strong></p>
+            
+            <h3>Third Law: Law of Action and Reaction</h3>
+            <p>For every action, there is an equal and opposite reaction.</p>
+        </section>
+
+        <section id="biography" class="section hidden">
+            <h2>Biography of Sir Isaac Newton</h2>
+            <p>Sir Isaac Newton (1643-1727) was an English mathematician, physicist, and astronomer who is widely recognized as one of the most influential scientists of all time. He formulated the laws of motion and universal gravitation, which laid the foundation for classical mechanics.</p>
+            <p>Newton was born on January 4, 1643, in Woolsthorpe, Lincolnshire, England. He was a child prodigy, entering Trinity College, Cambridge, in 1661, where he would later become a professor of mathematics. His early work focused on mathematics and optics, but he is most famous for his contributions to physics.</p>
+            <p>His most important work, (Mathematical Principles of Natural Philosophy), published in 1687, outlined his laws of motion and the law of universal gravitation. These works helped explain planetary motion, the behavior of objects in motion on Earth, and the forces that govern them.</p>
+            <p>Isaac Newton passed away on March 31, 1727, at the age of 84. His legacy continues to influence modern science, as his laws of motion and gravitation are still used in everything from rocket science to engineering.</p>
+            <p>Newton's life was not without controversy; his intense rivalry with Leibniz over the invention of calculus, his dispute with other scientists, and his reclusive nature were aspects of his character. Nevertheless, his contributions to science remain unrivaled.</p>
+        </section>
+
+        <section id="impact" class="section hidden">
+            <h2>Impact of Newton's Laws</h2>
+            <p>Newton's Laws of Motion laid the foundation for classical mechanics and revolutionized the way we understand the physical world. These laws have far-reaching applications in engineering, aerospace, physics, and everyday life.</p>
+            <p><strong>1. Engineering and Technology:</strong> Newton's Laws are integral in the field of engineering. Engineers use these principles to design everything from bridges to skyscrapers.</p>
+            <p><strong>2. Aerospace and Space Exploration:</strong> In aerospace engineering, Newton's laws are used to understand and predict the motion of spacecraft and satellites.</p>
+            <p><strong>3. Planetary Motion and Astronomy:</strong> Newton's Laws also revolutionized our understanding of celestial mechanics.</p>
+            <p><strong>4. Everyday Life and Sports:</strong> Newton's Laws are at play in countless everyday activities, from driving a car to playing sports.</p>
+            <p>In summary, Newton's Laws of Motion continue to be central to modern science and engineering.</p>
+        </section>
+
+        <section id="contact" class="section hidden">
+            <h2>Contact Us</h2>
+            <p><strong>Email:</strong> <a href="mailto:11061279@uvu.edu">11061279@uvu.edu</a></p>
+            <p>If you are interested in:</p>
+            <ul>
+                <li>Scheduling a private tutorial on Newton's Laws and other physics topics</li>
+                <li>Enrolling in our online physics classes</li>
+                <li>Ordering books related to physics and scientific education</li>
+                <li>Receiving more information on upcoming physics workshops and seminars</li>
+            </ul>
+            <p>Please reach out through the email above, and we’ll be happy to assist you!</p>
+        </section>
+
+        <section id="visitor" class="section hidden">
+            <h2>Visitor Registration</h2>
+            <form id="visitorForm" novalidate>
+                <ul class="form-list">
+                    <li>
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="address">Address *</label>
+                        <input type="text" id="address" name="address" required placeholder="Enter your address">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="city">City *</label>
+                        <input type="text" id="city" name="city" required placeholder="Enter your city">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="state">State *</label>
+                        <input type="text" id="state" name="state" required maxlength="2" placeholder="e.g., UT">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="zip">ZIP Code *</label>
+                        <input type="text" id="zip" name="zip" required placeholder="e.g., 12345">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="e.g., (123) 456-7890">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label>How did you find us? *</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="internet" name="referral" value="internet">
+                            <label for="internet">Internet</label>
+                            <input type="checkbox" id="friend" name="referral" value="friend">
+                            <label for="friend">Friend</label>
+                            <input type="checkbox" id="google" name="referral" value="google">
+                            <label for="google">Google</label>
+                        </div>
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="comments">Comments</label>
+                        <textarea id="comments" name="comments" placeholder="Your comments"></textarea>
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <button type="submit" id="submitBtn">Submit</button>
+                    </li>
+                </ul>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Newton's Laws of Motion</p>
+    </footer>
+
+    <script src="js/validation.js"></script> <!-- Added validation.js -->
+    <script src="js/page.js"></script> <!-- Added page.js -->
+    <script src="js/main.js"></script>
+</body>
+</html>

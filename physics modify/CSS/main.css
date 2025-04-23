@@ -1,0 +1,207 @@
+/* 
+  - Organized CSS with comments for better readability
+  - Used Flexbox for navigation and layout alignment
+  - Improved spacing, shadows, and typography for better look
+  - Added mobile responsiveness with media queries
+  - Ensured proper use of Grid for section layouts
+*/
+
+/* General Styles */
+body {
+    background-color: #f7fafc;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #4A90E2, #2B6CB0);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.header-img {
+    width: 15rem;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: #4A90E2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #e2e8f0;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #333;
+    padding: 1rem;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: #5F6368;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-list li a:hover {
+    background-color: #007AFF;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    background-color: #EDF2F7;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1A202C;
+    margin-bottom: 1rem;
+}
+
+.section h3 {
+    font-size: 1.5rem;
+    font-weight: medium;
+    margin-top: 1rem;
+}
+
+.section p {
+    margin-bottom: 1rem;
+}
+
+.section ul {
+    list-style: disc;
+    padding-left: 2rem;
+}
+
+.section-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-video {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4A90E2;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.section.show {
+    animation: fadeIn 1s ease-out;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-img {
+        width: 10rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .nav-list li a {
+        display: block;
+        text-align: center;
+    }
+
+    .section {
+        padding: 1rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-video {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-img {
+        width: 8rem;
+    }
+
+    .section-video {
+        height: 150px;
+    }
+}

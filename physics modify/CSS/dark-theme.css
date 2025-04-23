@@ -1,0 +1,109 @@
+/* 
+  Dark Theme CSS for the website
+  - Changed to a dark color scheme (dark background, light text)
+  - Modified navigation to a vertical sidebar on desktop
+  - Updated fonts to a more modern style (Roboto)
+  - Changed animation to a slide-in effect from the left
+  - Adjusted shadows and borders for a sleek look
+*/
+
+body {
+    background-color: #1a202c;
+    color: #e2e8f0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #2d3748, #1a202c);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    color: #e2e8f0;
+}
+
+.theme-toggle-btn {
+    background-color: #4a5568;
+    color: #e2e8f0;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #718096;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #2d3748;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    padding: 1rem 0;
+}
+
+.nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-list li a {
+    background-color: #4a5568;
+    color: #e2e8f0;
+}
+
+.nav-list li a:hover {
+    background-color: #63b3ed;
+}
+
+/* Main Content Styles */
+main {
+    margin-left: 220px;
+}
+
+.section {
+    background-color: #2d3748;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.section h2 {
+    color: #e2e8f0;
+}
+
+.section h3 {
+    color: #cbd5e0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2d3748;
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.section.show {
+    animation: slideIn 0.8s ease-out;
+}
+
+/* Mobile Responsiveness for Dark Theme */
+@media (max-width: 768px) {
+    nav {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    main {
+        margin-left: 0;
+    }
+}
